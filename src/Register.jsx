@@ -2,31 +2,28 @@ import React from "react";
 
 export default function Register() {
   return (
-    <div className="w-full h-full mx-auto text-left bg-black">
-      {/* Top Bar with Close.svg */}
-      <div className="bg-neutral-800 p-1 px-4 flex justify-between items-center">
-        <h2 className="text-md">Step Into the Story</h2>
-        <img src="/Close.svg" alt="Close" className="w-5 h-5 cursor-pointer" />
+    <div className="w-full h-full mx-auto text-left bg-black/5 backdrop-blur-xl">
+      {/* Top Bar */}
+      <div className="bg-neutral-800 p-2 px-4 flex justify-between items-center">
+        <h2 className="text-sm md:text-md uppercase">Step Into the Story</h2>
+        <img src="/Close.svg" alt="Close" className="w-4 h-4 cursor-pointer" />
       </div>
 
       {/* Content */}
-      <div className=" py-8 flex flex-col gap-6">
-        {/* Info + Text in same row */}
-        <div className="flex items-center gap-4">
-          <img src="/Info.svg" alt="Info" className="w-10 h-10 mx-12 mt-4" />
-          <p className="text-md text-white pe-5 ">
-            Register Today to be a Part of a CTF Unlike Anything you have Played
-            Before.
-          </p>
-        </div>
+      <div className="py-6 md:py-6 flex flex-col gap-6 px-4 md:px-15">
+        {/* Text */}
+        <p className="text-sm md:text-md text-white text-center leading-relaxed">
+          Register Today to be a Part of a CTF Unlike Anything you have Played
+          Before.
+        </p>
 
-        {/* Register Button */}
+        {/* Button */}
         <button
           type="submit"
-          className="flex text-md items-center gap-2 mx-auto bg-neutral-800 border-2 border-white text-white px-4 py-1 w-fit"
+          className="flex items-center gap-2 mx-auto bg-neutral-800 border-1 border-e-5 border-b-5 border-white text-white px-4 py-1 text-sm md:text-md hover:bg-neutral-700 transition"
         >
           REGISTER
-          <img src="/Arrow.svg" alt="Arrow" className="w-4 h-4" />
+          <img src="/Arrow.svg" alt="Arrow" className="w-3 h-3 md:w-4 md:h-4" />
         </button>
       </div>
     </div>
