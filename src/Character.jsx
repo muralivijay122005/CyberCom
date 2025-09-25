@@ -23,7 +23,7 @@ export default function Character() {
 
           {/* Paragraph */}
           <p className="text-white uppercase max-w-lg text-md w-full text-left leading-relaxed break-words">
-            <GlitchOnHover
+            <GlitchonHover
               text="Meet Asher - the face of Cybercom. Brilliant when he wants to be, mischievous when he shouldn’t be, and curious about everything he’s not supposed to touch. Following Asher isn’t just about playing a CTF it’s stepping into his chaotic, thrilling world. He may be a menace, but you’ll see a bit of yourself in him, curious, restless, and always ready to break the rules."
               textColor="text-white"
               glitchRadius={5}
