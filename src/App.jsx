@@ -16,7 +16,7 @@ function App() {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0 h-screen opacity-15"
-        style={{ backgroundImage: "url('/Map_Bg.jpg')" }}
+        style={{ backgroundImage: "url('/Map_Bg.webp')" }}
       ></div>
 
       {/* NavBar absolute */}
