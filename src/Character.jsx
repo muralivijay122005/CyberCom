@@ -1,5 +1,5 @@
 import React from "react";
-import GlitchOnHover from "./GlitchOnHover.jsx";
+import GlitchonHover from "./GlitchonHover.jsx";
 import CardStack2 from "./CardStack2.jsx";
 
 export default function Character() {
@@ -15,10 +15,10 @@ export default function Character() {
         </div>
 
         {/* Right Column with Text */}
-        <div className="hidden md:block border-s border-t border-neutral-800 p-6 flex flex-col justify-center items-start">
+        <div className=" md:block border-s border-t border-neutral-800 p-6 flex flex-col justify-center items-start">
           {/* Title */}
           <h1 className="text-md w-fit font-medium bg-sky-500 text-black px-2 uppercase mb-4">
-            <GlitchOnHover text="Character CTF" textColor="text-black" />
+            <GlitchonHover text="Character CTF" textColor="text-black" />
           </h1>
 
           {/* Paragraph */}

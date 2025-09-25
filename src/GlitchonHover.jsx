@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function GlitchOnHover({
+export default function GlitchonHover({
   text,
   textColor = "text-white",
   glitchRadius = 2,
