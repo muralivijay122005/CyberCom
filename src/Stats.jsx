@@ -10,10 +10,10 @@ export default function About() {
         "
       >
         {/* Left Empty Column */}
-        <div className="hidden md:block border-t border-e border-neutral-800 p-4"></div>
+        <div className="hidden md:block border-t border-e border-neutral-800 p-4 "></div>
 
         {/* Box 1 */}
-        <div className="p-6 border-t border-neutral-800">
+        <div className="p-6 border-t border-neutral-800 py-15">
           {/* Stats Column */}
           <div className="flex flex-col uppercase border-s-20 border-sky-500">
             <div className="border border-neutral-800 text-center p-4">
@@ -28,10 +28,10 @@ export default function About() {
         </div>
 
         {/* Box 2 */}
-        <div className="p-6 border-t border-x border-neutral-800"></div>
+        <div className="p-6 border-t border-x border-neutral-800 py-15"></div>
 
         {/* Box 3 */}
-        <div className="p-6 border-t border-neutral-800">
+        <div className="p-6 border-t border-neutral-800 py-15">
           {/* Stats Column */}
           <div className="flex flex-col uppercase border-e-20 border-sky-500">
             <div className="border border-neutral-800 text-center p-4">

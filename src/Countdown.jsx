@@ -1,5 +1,40 @@
 import React, { useEffect, useState } from "react";
 
+// GlitchNumber Component
+function GlitchNumber({ value }) {
+  const [display, setDisplay] = useState(value);
+
+  useEffect(() => {
+    let frame = 0;
+    const chars = "0123456789";
+    const scrambleFrames = 10; // number of random frames before showing correct number
+    const interval = setInterval(() => {
+      if (frame < scrambleFrames) {
+        // show random chars
+        setDisplay(
+          String(value)
+            .split("")
+            .map(() => chars[Math.floor(Math.random() * chars.length)])
+            .join("")
+        );
+        frame++;
+      } else {
+        // show correct value
+        setDisplay(String(value).padStart(2, "0"));
+        clearInterval(interval);
+      }
+    }, 30); // speed of scrambling (~50ms per scramble)
+    return () => clearInterval(interval);
+  }, [value]);
+
+  return (
+    <span className="supply-regular text-2xl md:text-4xl text-white">
+      {display}
+    </span>
+  );
+}
+
+// Countdown Component
 export default function CountdownToSept27({ targetYear }) {
   const computeTarget = (yr) => {
     const now = new Date();
@@ -52,8 +87,10 @@ export default function CountdownToSept27({ targetYear }) {
             key={i}
             className="flex flex-col items-center px-2 md:px-3 rounded-lg"
           >
-            <div className="text-2xl md:text-4xl">{pad(item.value)}</div>
-            <div className="mt-1 text-lg md:text-lg">{item.label}</div>
+            <GlitchNumber value={pad(item.value)} />
+            <div className="mt-1 text-lg md:text-lg text-white">
+              {item.label}
+            </div>
           </div>
         ))}
       </div>

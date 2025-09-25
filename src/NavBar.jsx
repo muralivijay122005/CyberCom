@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import GlitchText from "./GlitchText.jsx";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,15 +16,15 @@ export default function NavBar() {
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center gap-6 text-sm me-10">
-        <a href="#home" className="text-white p-2">
-          HOME
+        <a href="#home" className="p-2">
+          <GlitchText text="HOME" textColor="text-white" delay={500} />
         </a>
-        <a href="#about" className="text-white p-2">
-          ABOUT
+        <a href="#about" className="p-2">
+          <GlitchText text="ABOUT" textColor="text-white" delay={500} />
         </a>
         <a href="#register">
-          <button className="text-white border-b-2 border-white p-1 px-3 bg-white/15">
-            REGISTER
+          <button className="p-1 px-3 bg-white/15 border-b-2 border-white">
+            <GlitchText text="REGISTER" textColor="text-white" delay={500} />
           </button>
         </a>
       </div>
@@ -41,23 +42,15 @@ export default function NavBar() {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-black/90 flex flex-col items-center gap-6 py-6 md:hidden">
-          <a
-            href="#home"
-            className="text-white text-lg"
-            onClick={() => setIsOpen(false)}
-          >
-            HOME
+          <a href="#home" className="text-lg" onClick={() => setIsOpen(false)}>
+            <GlitchText text="HOME" textColor="text-white" delay={500} />
           </a>
-          <a
-            href="#about"
-            className="text-white text-lg"
-            onClick={() => setIsOpen(false)}
-          >
-            ABOUT
+          <a href="#about" className="text-lg" onClick={() => setIsOpen(false)}>
+            <GlitchText text="ABOUT" textColor="text-white" delay={500} />
           </a>
           <a href="#register" onClick={() => setIsOpen(false)}>
-            <button className="text-white border-b-2 border-white p-2 px-4 bg-white/15">
-              REGISTER
+            <button className="p-2 px-4 bg-white/15 border-b-2 border-white">
+              <GlitchText text="REGISTER" textColor="text-white" delay={500} />
             </button>
           </a>
         </div>

@@ -8,6 +8,7 @@ import SocialMedia from "./SocialMedia.jsx";
 import NavBar from "./NavBar.jsx";
 import Footer from "./Footer.jsx";
 import RollingText from "./RollingText.jsx";
+import GlitchRevealText from "./GlitchRevealText.jsx";
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
       <div
         className="
           relative z-10 supply-regular 
-          grid grid-cols-1 gap-6 px-4 md:grid-cols-[0.1fr_0.7fr_1fr] md:grid-rows-[0.7fr_auto_auto] md:gap-0 md:px-0 md:pt-0
+          grid grid-cols-1 gap-6 px-4 md:grid-cols-[0.1fr_0.7fr_1fr] 
+          md:grid-rows-[0.7fr_auto_auto] md:gap-0 md:px-0 md:pt-0
           min-h-screen
         "
       >
@@ -35,7 +37,7 @@ function App() {
         <div className="hidden md:block border-e border-neutral-800 p-4"></div>
 
         <div className="p-6 mt-25 md:p-12 text-left flex items-start border-neutral-800 ">
-          <div className="w-10 h-10 md:w-12 md:h-12 mt-3 md:mt-4 rotate-45 bg-sky-500 flex items-center justify-center">
+          <div className="w-10 h-10 md:w-12 md:h-12 mt-3 md:mt-4 rotate-45 bg-sky-500 flex items-center animate-glitch-flash justify-center">
             <img
               src="/Flag.svg"
               alt="Flag Icon"
@@ -43,15 +45,30 @@ function App() {
             />
           </div>
           <div className="ms-3">
-            <h1 className="text-lg md:text-xl w-fit tracking-wide bg-black text-white px-2 uppercase">
-              A Global CTF Summit
+            <h1 className="text-lg md:text-xl w-fit tracking-wide uppercase">
+              <GlitchRevealText
+                text="A Global CTF Summit"
+                bg="bg-black"
+                textColor="text-white"
+                delay={1000}
+              />
             </h1>
-            <div className="space-y-1 mt-1 supply-medium ">
-              <p className="text-black text-sm bg-white px-2 w-fit">
-                CTFs will Never be the Same again.
+            <div className="supply-medium ">
+              <p className="text-sm w-fit">
+                <GlitchRevealText
+                  text="CTFs will Never be the Same again."
+                  bg="bg-white"
+                  textColor="text-black"
+                  delay={1000}
+                />
               </p>
-              <p className="text-black text-sm bg-white px-2 w-fit">
-                Are you Ready ?
+              <p className="text-sm w-fit">
+                <GlitchRevealText
+                  text="Are you Ready?"
+                  bg="bg-white"
+                  textColor="text-black"
+                  delay={1000}
+                />
               </p>
             </div>
           </div>
@@ -83,9 +100,11 @@ function App() {
           </p>
         </div>
       </div>
+
       <div className="absolute top-145 left-0 w-full z-50">
         <RollingText />
       </div>
+
       <About />
       <Character />
       <Stats />
