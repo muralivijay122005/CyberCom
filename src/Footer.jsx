@@ -24,11 +24,37 @@ export default function Footer() {
             />
             <p className="text-lg uppercase mb-3">CYBERCOM</p>
           </div>
+
           {/* Social Media Icons */}
           <div className="flex space-x-4 mb-4">
-            <img src="/instagram.svg" alt="Instagram" className="w-5 h-5" />
-            <img src="/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
-            <img src="/discord.svg" alt="Discord" className="w-5 h-5" />
+            <a
+              href="https://instagram.com/cybercom.live/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/instagram.svg" alt="Instagram" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://linkedin.com/company/cybercom-live"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://discord.gg/dnKBB9Ra"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/discord.svg" alt="Discord" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://x.com/CybercomLive"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/x.svg" alt="X" className="w-5 h-5" />
+            </a>
           </div>
 
           {/* White Box */}
@@ -58,13 +84,42 @@ export default function Footer() {
 
           {/* Social Media Icons */}
           <div className="flex space-x-4 mb-4">
-            <img src="/instagram.svg" alt="Instagram" className="w-5 h-5" />
-            <img src="/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
-            <img src="/discord.svg" alt="Discord" className="w-5 h-5" />
+            <a
+              href="https://www.instagram.com/dedsec_x01/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/instagram.svg" alt="Instagram" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://linkedin.com/company/dedsec-x01"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://discord.gg/dnKBB9Ra"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/discord.svg" alt="Discord" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://x.com/CybercomLive"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/x.svg" alt="X" className="w-5 h-5" />
+            </a>
           </div>
 
+          <p className="text-sm text-red-500 text-center my-10 uppercase">
+            Error 404: Limits not found.
+          </p>
+
           {/* Terms and Conditions */}
-          <p className="text-sm text-center mb-1 mt-20 uppercase">
+          <p className="text-sm text-center mb-1 uppercase">
             Terms and Conditions apply.
           </p>
           <p className="text-sm text-center uppercase">

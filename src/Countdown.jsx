@@ -7,7 +7,7 @@ function GlitchNumber({ value }) {
   useEffect(() => {
     let frame = 0;
     const chars = "0123456789";
-    const scrambleFrames = 10; // number of random frames before showing correct number
+    const scrambleFrames = 10;
     const interval = setInterval(() => {
       if (frame < scrambleFrames) {
         setDisplay(
@@ -33,8 +33,8 @@ function GlitchNumber({ value }) {
 }
 
 // Countdown Component
-export default function CountdownToFeb1() {
-  const computeTarget = () => new Date(2026, 1, 1, 0, 0, 0); // Feb 1, 2026
+export default function CountdownToJan9() {
+  const computeTarget = () => new Date(2026, 0, 3, 0, 0, 0); // Jan 3, 2026
 
   const [target, setTarget] = useState(() => computeTarget());
   const [timeLeft, setTimeLeft] = useState(() => {
