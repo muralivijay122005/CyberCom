@@ -22,7 +22,7 @@ export default function Footer() {
               alt="Cybercom Logo"
               className="w-6 h-auto mb-2"
             />
-            <p className="text-lg uppercase mb-4">CYBERCOM</p>
+            <p className="text-lg uppercase mb-3">CYBERCOM</p>
           </div>
           {/* Social Media Icons */}
           <div className="flex space-x-4 mb-4">
@@ -36,7 +36,16 @@ export default function Footer() {
         </div>
 
         {/* Box 2 */}
-        <div className="p-6 border-t border-x border-neutral-800"></div>
+        <div className="p-4 border-t border-x border-neutral-800 flex justify-center items-center">
+          <video
+            src="/Globe.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-60 h-60 object-cover rounded-full brightness-200 hue-rotate-350 saturate-180"
+          />
+        </div>
 
         {/* Box 3 */}
         <div className="p-6 border-t border-neutral-800 flex flex-col items-center">

@@ -9,6 +9,7 @@ import NavBar from "./NavBar.jsx";
 import Footer from "./Footer.jsx";
 import RollingText from "./RollingText.jsx";
 import GlitchRevealText from "./GlitchRevealText.jsx";
+import Sponsors from "./Sponsors.jsx"; // ⬅️ Import Sponsors
 
 function App() {
   return (
@@ -18,12 +19,10 @@ function App() {
         className="absolute inset-0 bg-cover bg-center z-0 h-screen opacity-15"
         style={{ backgroundImage: "url('/Map_Bg.webp')" }}
       ></div>
-
       {/* NavBar absolute */}
       <div className="absolute top-0 left-0 w-full z-20">
         <NavBar />
       </div>
-
       {/* Main Grid */}
       <div
         className="
@@ -100,14 +99,13 @@ function App() {
           </p>
         </div>
       </div>
-
       <div className="absolute top-145 left-0 w-full z-50">
         <RollingText />
       </div>
-
       <About />
       <Character />
       <Stats />
+      <Sponsors />
       <Footer />
     </div>
   );
