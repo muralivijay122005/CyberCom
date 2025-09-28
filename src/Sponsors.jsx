@@ -6,7 +6,7 @@ export default function About() {
       <div
         className="
           relative z-10 supply-regular 
-          grid grid-cols-1 md:grid-cols-[0.088fr_auto_0fr_0fr] 
+          grid grid-cols-1 md:grid-cols-[0.064fr_auto_0fr_0fr] 
         "
       >
         {/* Left Empty Column */}
