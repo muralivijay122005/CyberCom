@@ -2,6 +2,10 @@ import React from "react";
 import GlitchText from "./GlitchText.jsx";
 
 export default function Register() {
+  const handleRegisterClick = () => {
+    window.location.href = "https://ctf.cybercom.live";
+  };
+
   return (
     <div className="w-full h-full mx-auto text-left bg-black/5 backdrop-blur-xl">
       {/* Top Bar */}
@@ -19,7 +23,7 @@ export default function Register() {
       {/* Content */}
       <div className="py-6 md:py-6 flex flex-col justify-center items-center gap-6 px-4 md:px-15">
         {/* Text split into two lines */}
-        <p className="text-sm md:text-md max-w-xs text-white text-center  leading-relaxed">
+        <p className="text-sm md:text-md max-w-xs text-white text-center leading-relaxed">
           <GlitchText
             text="Register Today to be a Part of a CTF"
             textColor="text-white"
@@ -35,7 +39,8 @@ export default function Register() {
 
         {/* Button */}
         <button
-          type="submit"
+          type="button"
+          onClick={handleRegisterClick}
           className="flex items-center gap-2 mx-auto bg-neutral-800 border-1 border-e-5 border-b-5 border-white text-white px-4 py-1 text-sm md:text-md hover:bg-neutral-700 transition"
         >
           <GlitchText text="REGISTER" textColor="text-white" delay={1500} />

@@ -9,7 +9,6 @@ import NavBar from "./NavBar.jsx";
 import Footer from "./Footer.jsx";
 import RollingText from "./RollingText.jsx";
 import GlitchRevealText from "./GlitchRevealText.jsx";
-import Sponsors from "./Sponsors.jsx"; // ⬅️ Import Sponsors
 
 function App() {
   return (
@@ -102,10 +101,12 @@ function App() {
       <div className="absolute top-145 left-0 w-full z-50">
         <RollingText />
       </div>
-      <About />
+      <div id="about">
+        <About />
+      </div>
       <Character />
       <Stats />
-      <Sponsors />
+
       <Footer />
     </div>
   );

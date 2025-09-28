@@ -10,7 +10,6 @@ function GlitchNumber({ value }) {
     const scrambleFrames = 10; // number of random frames before showing correct number
     const interval = setInterval(() => {
       if (frame < scrambleFrames) {
-        // show random chars
         setDisplay(
           String(value)
             .split("")
@@ -19,11 +18,10 @@ function GlitchNumber({ value }) {
         );
         frame++;
       } else {
-        // show correct value
         setDisplay(String(value).padStart(2, "0"));
         clearInterval(interval);
       }
-    }, 30); // speed of scrambling (~50ms per scramble)
+    }, 30);
     return () => clearInterval(interval);
   }, [value]);
 
@@ -35,18 +33,12 @@ function GlitchNumber({ value }) {
 }
 
 // Countdown Component
-export default function CountdownToSept27({ targetYear }) {
-  const computeTarget = (yr) => {
-    const now = new Date();
-    const year = yr ?? now.getFullYear();
-    let t = new Date(year, 8, 27, 0, 0, 0);
-    if (now > t) t = new Date(year + 1, 8, 27, 0, 0, 0);
-    return t;
-  };
+export default function CountdownToFeb1() {
+  const computeTarget = () => new Date(2026, 1, 1, 0, 0, 0); // Feb 1, 2026
 
-  const [target, setTarget] = useState(() => computeTarget(targetYear));
+  const [target, setTarget] = useState(() => computeTarget());
   const [timeLeft, setTimeLeft] = useState(() => {
-    const diff = computeTarget(targetYear) - new Date();
+    const diff = computeTarget() - new Date();
     return diff > 0 ? diff : 0;
   });
 
@@ -61,11 +53,11 @@ export default function CountdownToSept27({ targetYear }) {
   }, [target]);
 
   useEffect(() => {
-    if (timeLeft === 0)
-      setTarget((t) => new Date(t.getFullYear() + 1, 8, 27, 0, 0, 0));
+    if (timeLeft === 0) setTarget(computeTarget());
   }, [timeLeft]);
 
   const totalSeconds = Math.floor(timeLeft / 1000);
+  const days = Math.floor(totalSeconds / (60 * 60 * 24));
   const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
   const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
   const seconds = totalSeconds % 60;
@@ -74,11 +66,12 @@ export default function CountdownToSept27({ targetYear }) {
 
   return (
     <div className="mx-auto text-center h-fit">
-      <h2 className="text-sm md:text-xl justify-center mx-auto items-center text-sky-500 w-fit px-3 mb-3 ">
+      <h2 className="text-sm md:text-xl justify-center mx-auto items-center text-sky-500 w-fit px-3 mb-3">
         LAUNCHING IN
       </h2>
       <div className="flex gap-2 md:gap-3 justify-center items-center">
         {[
+          { value: days, label: "DAYS" },
           { value: hours, label: "HOURS" },
           { value: minutes, label: "MINS" },
           { value: seconds, label: "SECS" },
