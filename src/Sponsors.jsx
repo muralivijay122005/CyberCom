@@ -27,16 +27,6 @@ export default function About() {
                 className="max-w-[70%] max-h-[70%] object-contain"
               />
             </div>
-
-            {/* Placeholder Sponsor 2 */}
-            <div className="w-32 h-32 flex items-center justify-center border border-neutral-700 bg-neutral-900 text-neutral-500">
-              Placeholder
-            </div>
-
-            {/* Placeholder Sponsor 3 */}
-            <div className="w-32 h-32 flex items-center justify-center border border-neutral-700 bg-neutral-900 text-neutral-500">
-              Placeholder
-            </div>
           </div>
         </div>
       </div>
